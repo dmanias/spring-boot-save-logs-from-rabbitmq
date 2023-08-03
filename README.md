@@ -1,0 +1,1 @@
+# spring-boot-save-logs-from-rabbitmq
