@@ -35,7 +35,7 @@ Also note that the %2f in the URL is URL-encoded form of /, which represents the
 
 Lastly, the URL and port (15672 is the default port for the management plugin) should match your RabbitMQ server's configuration.
 
-#### Fetch All Messages
+## Fetch All Messages
 You can fetch all the messages using the following endpoint:
 
     GET http://localhost:9087/messages/
