@@ -1,5 +1,20 @@
 # spring-boot-save-logs-from-rabbitmq
 
+## Swagger UI Documentation
+
+Our API documentation is available via Swagger UI. You can view the Swagger UI at:
+
+To use Swagger UI, follow these steps:
+
+1. Start the application.
+2. Open your web browser.
+3. Navigate to `http://localhost:9087/swagger-ui.html`. Replace `localhost:8080` with your application's hostname and port if they are different.
+4. You should now see the Swagger UI, showing the API endpoints of our application.
+
+Please note that you may need to adjust the URL based on your server's hostname and the port your application is running on.
+
+
+
 ## Sending a Message to RabbitMQ
 
 You can send a StandardMessage to RabbitMQ via the command line using curl. First, make sure that the RabbitMQ Management Plugin is enabled and accessible. Then use the following command:
