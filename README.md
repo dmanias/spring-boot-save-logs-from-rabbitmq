@@ -23,15 +23,15 @@ Lastly, the URL and port (15672 is the default port for the management plugin) s
 #### Fetch All Messages
 You can fetch all the messages using the following endpoint:
 
-    GET http://localhost:8080/api/v1/messages/
+    GET http://localhost:9087/messages/
 
 #### Fetch a Specific Message by ID
 To fetch a message by its ID, use the following endpoint:
 
-    GET http://localhost:8080/api/v1/messages/{id}
+    GET http://localhost:9087/messages/{id}
 
 In the above URL, replace `{id}` with the actual ID of the message. For example, to fetch a message with ID 1, the endpoint will look like this:
 
-    GET http://localhost:8080/api/v1/messages/1
+    GET http://localhost:9087/messages/1
 
 You can use these URLs in Postman to test your API. In Postman, select the appropriate HTTP method (i.e., GET) and enter the URL. Click 'Send' to make the request.
