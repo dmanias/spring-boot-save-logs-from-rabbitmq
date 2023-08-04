@@ -1,0 +1,25 @@
+cd /home/john/template
+docker stop template
+docker rm template
+docker build -t template:0.0.1 .
+docker run -d --name template --network portalNetwork --ip 10.100.0.84 --restart unless-stopped --privileged template:0.0.1
+docker logs template -f
+
+
+
+cd /home/john/template
+docker cp BlueMaster-Template-0.0.1.jar template:/opt/template/BlueMasterTemplate.jar
+docker restart template
+docker logs template --tail 100 -f
+
+
+docker stop template
+docker rm template
+docker login -u itampakakis -p dckr_pat_d5wS9zaaR_S_-mMS1XRS_XCQAyY
+docker pull itampakakis/bluemaster-template:latest
+docker run --log-driver json-file --log-opt max-size=15m --log-opt max-file=5 -d --name template --network host --restart unless-stopped --privileged -v /var/log/template:/var/log itampakakis/bluemaster-template:latest
+docker logout
+docker logs template --tail 100 -f
+
+
+docker run --log-driver json-file --log-opt max-size=15m --log-opt max-file=5 -d --name template --network host --restart unless-stopped --privileged -v /var/log/template:/var/log itampakakis/bluemaster-template:latest

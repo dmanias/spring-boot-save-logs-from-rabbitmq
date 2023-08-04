@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: savelogs
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: dev
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - 3306:3306
+  rabbitmq:
+    image: rabbitmq:3-management
+    environment:
+      RABBITMQ_DEFAULT_USER: dev
+      RABBITMQ_DEFAULT_PASS: dev
+    ports:
+      - 15672:15672
+      - 5672:5672
+volumes:
+  mysql_data:
